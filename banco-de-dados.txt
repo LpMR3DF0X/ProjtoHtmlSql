@@ -1,0 +1,19 @@
+CREATE TABLE aluno (
+  id_aluno INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  curso_id_curso INTEGER UNSIGNED NOT NULL,
+  nome_aluno VARCHAR(255) NULL,
+  email_aluno VARCHAR(255) NULL,
+  rgm_aluno INTEGER UNSIGNED NULL,
+  data_nasc_aluno DATE NULL,
+  genero_aluno CHAR(1) NULL,
+  PRIMARY KEY(id_aluno),
+  INDEX aluno_FKIndex1(curso_id_curso)
+);
+
+CREATE TABLE curso (
+  id_curso INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  nome_curso VARCHAR(50) NULL,
+  PRIMARY KEY(id_curso)
+);
+
+
